@@ -56,7 +56,7 @@ print("Accuracy:", str(round(accuracy, 2) * 100) + "%", "F1:", round(f1, 2))
 cm = confusion_matrix(y_test, predictions, labels=pipe.classes_)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=pipe.classes_)
 disp.plot()
-plt.savefig("Results/model_results.png", dpi=120)
+plt.savefig("results/model_results.png", dpi=120)
 
 # Create the metrics file and save it in the Results folder.
 with open("results/metrics.txt", "w") as outfile:
