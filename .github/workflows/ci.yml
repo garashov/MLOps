@@ -5,7 +5,11 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-  
+
+defaults:
+  run:
+    working-directory: 1 Drug Classification
+
 permissions: write-all
 jobs:
   build:
