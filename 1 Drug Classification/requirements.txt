@@ -1,0 +1,5 @@
+scikit-learn==1.4.2
+skops==0.9.0
+pandas==2.2.2
+matplotlib==3.8.4
+black==24.4.2
