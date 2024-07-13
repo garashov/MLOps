@@ -11,9 +11,11 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 
 
+SEED=125
+
 # Load the dataset
 drug_df = pd.read_csv("data/drug.csv")
-drug_df = drug_df.sample(frac=1)
+drug_df = drug_df.sample(frac=1, random_state=SEED)
 drug_df.head(3)
 
 
@@ -23,7 +25,7 @@ y = drug_df.Drug.values
 
 # Train test split
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=125
+    X, y, test_size=0.3, random_state=SEED
 )
 
 # Create Pipeline
@@ -40,7 +42,7 @@ transform = ColumnTransformer(
 pipe = Pipeline(
     steps=[
         ("preprocessing", transform),
-        ("model", RandomForestClassifier(n_estimators=100, random_state=125)),
+        ("model", RandomForestClassifier(n_estimators=100, random_state=SEED)),
     ]
 )
 pipe.fit(X_train, y_train)

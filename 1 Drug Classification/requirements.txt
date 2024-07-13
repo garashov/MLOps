@@ -3,3 +3,4 @@ skops==0.9.0
 pandas==2.2.2
 matplotlib==3.8.4
 black==24.4.2
+numpy==1.25.0
