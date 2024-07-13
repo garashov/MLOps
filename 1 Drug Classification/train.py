@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 
 
-SEED=125
+SEED = 125
 
 # Load the dataset
 drug_df = pd.read_csv("data/drug.csv")
@@ -29,8 +29,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Create Pipeline
-cat_col = [1,2,3]
-num_col = [0,4]
+cat_col = [1, 2, 3]
+num_col = [0, 4]
 
 transform = ColumnTransformer(
     [

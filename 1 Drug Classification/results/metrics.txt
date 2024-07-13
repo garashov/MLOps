@@ -1,2 +1,8 @@
 
-Accuracy = 0.98, F1 Score = 0.93.
+Accuracy = 1.0, F1 Score = 1.0.
+Confusion Matrix:
+[[29  0  0  0  0]
+ [ 0  7  0  0  0]
+ [ 0  0  3  0  0]
+ [ 0  0  0  4  0]
+ [ 0  0  0  0 17]]
